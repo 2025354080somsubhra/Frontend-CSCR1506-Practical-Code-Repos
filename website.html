@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clinic Dashboard</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f1c2e;
+        color: #fff;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 220px;
+        background: #16263d;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    .sidebar h2 {
+        color: #00d4aa;
+        margin-bottom: 20px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        margin: 10px 0;
+        text-decoration: none;
+        color: #ccc;
+        border-radius: 6px;
+    }
+
+    .menu a.active, .menu a:hover {
+        background: #1f3b63;
+        color: #fff;
+    }
+
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        flex: 1;
+        background: #1a2e4a;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .card h3 {
+        margin: 10px 0;
+    }
+
+    .table {
+        background: #1a2e4a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #2c4a6b;
+    }
+
+    th {
+        color: #aaa;
+    }
+
+    .status {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .waiting {
+        background: orange;
+        color: #000;
+    }
+
+    .service {
+        background: #00c4ff;
+    }
+
+    .completed {
+        background: green;
+    }
+
+    .btn {
+        padding: 5px 8px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .call { background: #3498db; }
+    .done { background: #2ecc71; }
+    .info { background: #bdc3c7; color: #000; }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Wellness Grove</h2>
+        <div class="menu">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Patients</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="header">Staff Dashboard</div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Patients Waiting</h3>
+                <p>7</p>
+            </div>
+            <div class="card">
+                <h3>Avg. Service Time</h3>
+                <p>~12 min</p>
+            </div>
+            <div class="card">
+                <h3>Doctors Available</h3>
+                <p>4</p>
+            </div>
+        </div>
+
+        <div class="table">
+            <h3>Patient Queue</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Queue #</th>
+                    <th>Doctor</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>John Smith</td>
+                    <td>A-101</td>
+                    <td>Dr. Reed</td>
+                    <td><span class="status service">IN SERVICE</span></td>
+                    <td>
+                        <button class="btn call">Call</button>
+                        <button class="btn done">Approved</button>
+                        <button class="btn info">Info</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Emily White</td>
+                    <td>A-102</td>
+                    <td>Dr. Chen</td>
+                    <td><span class="status waiting">WAITING</span></td>
+                    <td>
+                        <button class="btn call">Call</button>
+                        <button class="btn done">Approved</button>
+                        <button class="btn info">Info</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>David Green</td>
+                    <td>A-103</td>
+                    <td>Dr. Grant</td>
+                    <td><span class="status waiting">WAITING</span></td>
+                    <td>
+                        <button class="btn call">Call</button>
+                        <button class="btn done">Approved</button>
+                        <button class="btn info">Info</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sarah Miller</td>
+                    <td>B-201</td>
+                    <td>Dr. Kim</td>
+                    <td><span class="status waiting">WAITING</span></td>
+                    <td>
+                        <button class="btn call">Call</button>
+                        <button class="btn done">Approved</button>
+                        <button class="btn info">Info</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Michael Brown</td>
+                    <td>B-202</td>
+                    <td>Dr. Reed</td>
+                    <td><span class="status completed">COMPLETED</span></td>
+                    <td>
+                        <button class="btn call">Call</button>
+                        <button class="btn done">Approved</button>
+                        <button class="btn info">Info</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
